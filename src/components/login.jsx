@@ -1,5 +1,5 @@
 
-import Signup from './components/signup';
+// import Signup from './components/signup';
 
 
 
@@ -22,10 +22,8 @@ function Login() {
           </div>
   
           <button className="btn">Login</button>
-            <Router>
 
-                <p className="text">Don't have an account? <Link to="/signup">Register</Link></p>
-            </Router>
+                <p className="text">Don't have an account? <a href='#'>Register</a></p>
         </form>
       </div>
   
