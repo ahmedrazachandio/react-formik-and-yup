@@ -10,30 +10,33 @@ function Signup() {
       <h1>Signup</h1>
       <Formik
         initialValues={{
-          firstName: '',
-          lastName: '',
+          firstName: 'Ahmed',
+          lastName: 'Raza',
           email: '',
         }}
         onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
+          console.log("values :" , values)
         }}
       >
         <Form>
-          <label htmlFor="firstName">First Name</label>
-          <Field id="firstName" name="firstName" placeholder="Jane" />
+          <div className="form-control">
+            <Field id="firstName" name="firstName" placeholder="Jane" required />
 
-          <label htmlFor="lastName">Last Name</label>
-          <Field id="lastName" name="lastName" placeholder="Doe" />
-
-          <label htmlFor="email">Email</label>
-          <Field
-            id="email"
-            name="email"
-            placeholder="jane@acme.com"
-            type="email"
-          />
-          <button type="submit">Submit</button>
+          </div>
+          <div className="form-control">
+            <Field id="lastName" name="lastName" placeholder="Doe" required />
+          </div>
+          <div className="form-control">
+            <Field
+              id="email"
+              name="email"
+              placeholder="ahmadraza.azt@gmail.com"
+              type="email"
+            />
+          </div>
+          <button className="btn" type="submit">Signup</button>
+      
+            <p className="text">You have an account <a href="#">Login</a> </p>
         </Form>
       </Formik>
 
@@ -44,13 +47,13 @@ function Signup() {
             <label>Full Name</label>
           </div>
           <div className="form-control">
-            <input type="email" id="email" required />
+          <input type="email" id="email" required />
             <label>Email</label>
           </div>
           <div className="form-control">
-            <input type="age" id="age" required />
+          <input type="age" id="age" required />
             <label>Age</label>
-          </div>
+            </div>
   
           <div className="form-control">
             <input type="password" id="password" required />
@@ -59,12 +62,12 @@ function Signup() {
           <div className="form-control">
             <input type="password" id="rePassword" required />
             <label>Confirm Password</label>
-          </div>
-  
-          <button className="btn" type="submit" onclick="signUp()">Signup</button>
-  
-          <p className="text">You have an account <a href="index.html">Login</a> </p>
+            </div>
+            <button className="btn" type="submit" onclick="signUp()">Signup</button>
+      
+            <p className="text">You have an account <a href="index.html">Login</a> </p>
         </form> */}
+  
     </div>
   );
 }
