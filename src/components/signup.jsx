@@ -10,8 +10,8 @@ function Signup() {
       <h1>Signup</h1>
       <Formik
         initialValues={{
-          firstName: 'Ahmed',
-          lastName: 'Raza',
+          firstName: '',
+          lastName: '',
           email: '',
         }}
         onSubmit={async (values) => {
@@ -20,11 +20,11 @@ function Signup() {
       >
         <Form>
           <div className="form-control">
-            <Field id="firstName" name="firstName" placeholder="Jane" required />
+            <Field id="firstName" name="firstName" placeholder="Ahmed" required />
 
           </div>
           <div className="form-control">
-            <Field id="lastName" name="lastName" placeholder="Doe" required />
+            <Field id="lastName" name="lastName" placeholder="Raza" required />
           </div>
           <div className="form-control">
             <Field
